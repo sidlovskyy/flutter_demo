@@ -5,10 +5,10 @@ part 'commit_entry_dto.g.dart';
 
 @JsonSerializable(nullable: false)
 class CommitEntryDto {
-  final String sha3;
+  final String sha;
   final CommitDto commit;
 
-  CommitEntryDto({this.sha3, this.commit});
+  CommitEntryDto({this.sha, this.commit});
 
   factory CommitEntryDto.fromJson(Map<String, dynamic> json) => _$CommitEntryDtoFromJson(json);
 

@@ -8,13 +8,13 @@ part of 'commit_entry_dto.dart';
 
 CommitEntryDto _$CommitEntryDtoFromJson(Map<String, dynamic> json) {
   return CommitEntryDto(
-    sha3: json['sha3'] as String,
+    sha: json['sha'] as String,
     commit: CommitDto.fromJson(json['commit'] as Map<String, dynamic>),
   );
 }
 
 Map<String, dynamic> _$CommitEntryDtoToJson(CommitEntryDto instance) =>
     <String, dynamic>{
-      'sha3': instance.sha3,
+      'sha': instance.sha,
       'commit': instance.commit,
     };

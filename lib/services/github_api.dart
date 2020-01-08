@@ -13,7 +13,7 @@ class GithubApi {
         .map((map) => CommitEntryDto.fromJson(map))
         .map(
           (dto) => Commit(
-            hash: dto.sha3,
+            hash: dto.sha,
             message: dto.commit.message,
             author: dto.commit.author.name,
             date: dto.commit.author.date,
