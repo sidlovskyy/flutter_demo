@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demo/services/github_api.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,6 +32,12 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
     });
+  }
+
+  @override
+  void initState() {
+    GithubApi.fetchCommits('sidlovskyy', 'flutter_demo').then((value) => print('Value: $value'));
+    super.initState();
   }
 
   @override
